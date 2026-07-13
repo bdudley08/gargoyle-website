@@ -42,6 +42,13 @@ const links = [
   document.getElementById('theme-toggle').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    localStorage.setItem('theme', next);
+    // Only persist an override when it differs from the OS theme; if the
+    // toggle lands back on the system's choice, resume following the system.
+    const system = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    if (next === system) {
+      localStorage.removeItem('theme');
+    } else {
+      localStorage.setItem('theme', next);
+    }
   });
 </script>

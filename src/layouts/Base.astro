@@ -65,12 +65,16 @@ const businessSchema = {
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141413" />
 
     <script is:inline>
-      // Set the theme before first paint to avoid a flash of the wrong mode.
+      // Set the theme before first paint, and follow live OS theme changes
+      // unless the user has picked one manually with the toggle.
       (() => {
-        const stored = localStorage.getItem('theme');
-        const theme =
-          stored ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.dataset.theme = theme;
+        const mq = matchMedia('(prefers-color-scheme: dark)');
+        const apply = () => {
+          const stored = localStorage.getItem('theme');
+          document.documentElement.dataset.theme = stored ?? (mq.matches ? 'dark' : 'light');
+        };
+        apply();
+        mq.addEventListener('change', apply);
       })();
     </script>
 
