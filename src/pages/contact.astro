@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+
+<Base
+  title="Get a Free Quote — Gargoyle Exterior Cleaning, Seattle & Eastside"
+  description="Request a free quote for gutter cleaning, window cleaning, or roof moss removal in Seattle and the Eastside. Firm pricing, usually the same day."
+>
+  <section class="section section--flush">
+    <div class="container">
+      <p class="kicker">Contact</p>
+      <h1 class="display">Get a free quote.</h1>
+      <p class="lede">
+        A few details about your home is all it takes. Quotes are firm, free,
+        and usually back to you the same day.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Contact details and quote form">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <dl class="contact-list">
+            <div>
+              <dt class="kicker" style="margin-bottom: 0.35rem;">Phone</dt>
+              <dd><a href={SITE.phoneHref}>{SITE.phone}</a></dd>
+            </div>
+            <div>
+              <dt class="kicker" style="margin-bottom: 0.35rem;">Email</dt>
+              <dd><a href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>
+            </div>
+            <div>
+              <dt class="kicker" style="margin-bottom: 0.35rem;">Hours</dt>
+              <dd>{SITE.hours}</dd>
+            </div>
+            <div>
+              <dt class="kicker" style="margin-bottom: 0.35rem;">Service area</dt>
+              <dd>{SITE.areaServed.join(' · ')}</dd>
+            </div>
+          </dl>
+          <p class="muted" style="margin-top: 2rem; max-width: 26em;">
+            Texting a couple of photos of your gutters or roof to the number
+            above is the fastest way to get an accurate quote.
+          </p>
+        </div>
+
+        <form name="quote" method="POST" data-netlify="true" netlify-honeypot="company">
+          <p hidden aria-hidden="true">
+            <label>Don't fill this out: <input name="company" /></label>
+          </p>
+          <div class="grid cols-2" style="gap: 0 1.25rem;">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="address">Street address &amp; city</label>
+            <input id="address" name="address" type="text" autocomplete="street-address" required />
+          </div>
+          <div class="field">
+            <label for="service">Service needed</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service…</option>
+              <option>Gutter cleaning</option>
+              <option>Window cleaning</option>
+              <option>Roof cleaning &amp; moss removal</option>
+              <option>Combination / not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Anything we should know?</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Two stories? Heavy tree cover? Gutter guards? Every detail helps."></textarea>
+          </div>
+          <button type="submit" class="btn btn--accent">Request my quote</button>
+          <p class="muted" style="margin-top: 1rem; font-size: 0.85rem;">
+            We reply within one business day — usually much faster.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact-list {
+    margin: 0;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .contact-list dd {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .contact-list dd a {
+    text-decoration: none;
+  }
+
+  .contact-list dd a:hover {
+    text-decoration: underline;
+  }
+</style>

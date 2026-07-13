@@ -1,0 +1,216 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+const faqs = [
+  {
+    q: 'How often should gutters be cleaned in the Seattle area?',
+    a: 'Most Puget Sound homes need gutters cleaned twice a year — once after the leaves drop in late fall, and once in spring to clear seed pods, needles, and moss. Homes under heavy tree cover may need a third visit.',
+  },
+  {
+    q: 'Do I need to be home during the service?',
+    a: 'No. As long as we can access the areas we are cleaning, you can go about your day. You will get before-and-after photos and a summary when the job is done.',
+  },
+  {
+    q: 'Do you pressure wash roofs?',
+    a: 'Never. Pressure washing strips granules off asphalt shingles and voids many roof warranties. We remove moss by hand and with soft brushing, then apply a treatment that keeps it from coming back.',
+  },
+  {
+    q: 'Are you licensed and insured?',
+    a: 'Yes. Gargoyle is a licensed and insured Washington business, and proof of insurance is available on request.',
+  },
+  {
+    q: 'How does pricing work?',
+    a: 'You get a firm quote before any work starts, based on the size of your home and the condition of the job. The price we quote is the price you pay — if we find something unexpected, we talk to you before touching it.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<Base
+  title="Gutter, Window & Roof Cleaning Services in Seattle — Gargoyle Exterior Cleaning"
+  description="Detailed exterior cleaning services for Seattle and Eastside homes: specialist gutter cleaning with photo proof, interior/exterior window cleaning, and roof-safe moss removal."
+>
+  <section class="section section--flush">
+    <div class="container">
+      <p class="kicker">Services</p>
+      <h1 class="display">What we clean, and how.</h1>
+      <p class="lede">
+        Every job is quoted up front, done by the owner, and finished with a
+        walkthrough. Here's exactly what's included in each service.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="gutters" aria-labelledby="gutters-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <span class="num">01</span>
+          <h2 id="gutters-heading" class="title-lg">
+            Gutter cleaning<span class="tag">Our specialty</span>
+          </h2>
+          <p class="lede">
+            Clogged gutters overflow into fascia, siding, and foundations — the
+            most expensive parts of your house to repair. Keeping water moving is
+            the whole reason Gargoyle exists.
+          </p>
+        </div>
+        <div class="body-copy">
+          <p>
+            We clean gutters by hand, not with a blower from the ground. Every
+            run is cleared, every downspout is flushed and confirmed flowing, and
+            all debris leaves with us. While we're up there, we look for the
+            small problems — loose hangers, failing seams, sagging runs — and
+            flag them with photos so nothing surprises you later.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Every gutter job includes</h3>
+          <ul class="checklist">
+            <li>All gutters cleared by hand, roof edge to roof edge</li>
+            <li>Downspouts flushed and tested for flow</li>
+            <li>Debris bagged and hauled away — nothing left on your lawn</li>
+            <li>Before-and-after photos of every run</li>
+            <li>A quick condition report flagging any issues we spot</li>
+            <li>Gutter guard and screen cleaning where installed</li>
+          </ul>
+          <p class="muted" style="margin-top: 1.5rem;">
+            Most Seattle-area homes need this twice a year: after leaf-fall and
+            again in spring. Ask about scheduled maintenance so you never have to
+            think about it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="windows" aria-labelledby="windows-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <span class="num">02</span>
+          <h2 id="windows-heading" class="title-lg">Window cleaning</h2>
+          <p class="lede">
+            Clean glass changes how a whole house feels — from the inside more
+            than the outside.
+          </p>
+        </div>
+        <div class="body-copy">
+          <p>
+            We clean interior and exterior glass with professional squeegee work,
+            not a garden hose and a prayer. Screens are washed, tracks and sills
+            are wiped out, and hard-water stains get proper treatment rather than
+            a smear-around. Skylights and hard-to-reach glass are welcome.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Every window job includes</h3>
+          <ul class="checklist">
+            <li>Exterior glass, squeegeed streak-free</li>
+            <li>Interior glass on request — shoes off, drop cloths down</li>
+            <li>Screens removed, washed, and reinstalled</li>
+            <li>Tracks and sills wiped clean</li>
+            <li>Hard-water spot treatment where needed</li>
+            <li>Skylights and specialty glass</li>
+          </ul>
+          <p class="muted" style="margin-top: 1.5rem;">
+            Pairs well with a gutter visit — bundling services on one trip saves
+            you money.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roof" aria-labelledby="roof-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <span class="num">03</span>
+          <h2 id="roof-heading" class="title-lg">Roof cleaning &amp; moss removal</h2>
+          <p class="lede">
+            Moss holds moisture against your shingles and pries them apart as it
+            grows. In this climate, it's not cosmetic — it shortens the life of
+            the roof.
+          </p>
+        </div>
+        <div class="body-copy">
+          <p>
+            We remove moss the way roofing manufacturers recommend: by hand and
+            with soft brushing, never a pressure washer. Loose debris is blown or
+            brushed off, valleys and problem spots get extra attention, and a
+            zinc-based treatment is applied to keep moss from re-establishing.
+            Because moss ends up in the gutters, every roof job includes a gutter
+            check.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Every roof job includes</h3>
+          <ul class="checklist">
+            <li>Hand and soft-brush moss removal — no pressure washing</li>
+            <li>Roof debris cleared from valleys, crickets, and behind chimneys</li>
+            <li>Zinc-based moss treatment to slow regrowth</li>
+            <li>Gutter and downspout check after the work</li>
+            <li>Before-and-after photos of the full roof</li>
+            <li>Notes on any shingle damage we spot while up there</li>
+          </ul>
+          <p class="muted" style="margin-top: 1.5rem;">
+            Best done in dry weather. If your roof is heavily covered, earlier is
+            always cheaper than later.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container">
+      <p class="kicker">Questions</p>
+      <h2 id="faq-heading" class="title-lg">Asked often, answered straight.</h2>
+      <dl class="faq">
+        {faqs.map((f) => (
+          <div class="faq-item">
+            <dt class="title-md">{f.q}</dt>
+            <dd>{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="title-lg">Ready when you are.</h2>
+      <div class="btn-row">
+        <a href="/contact" class="btn">Get a free quote</a>
+        <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
+          Call {SITE.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</Base>
+
+<style>
+  .faq {
+    margin-top: 2.5rem;
+    max-width: 46em;
+  }
+
+  .faq-item {
+    border-top: 1px solid var(--line);
+    padding-block: 1.5rem;
+  }
+
+  .faq-item dd {
+    margin: 0.6rem 0 0;
+    color: var(--muted);
+    max-width: 40em;
+  }
+</style>

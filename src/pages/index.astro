@@ -1,0 +1,204 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+
+<Base
+  title="Gargoyle Exterior Cleaning — Gutter, Window & Roof Cleaning in Seattle & the Eastside"
+  description="Owner-operated exterior cleaning in Seattle and the Eastside. Gutter cleaning is our specialty — plus streak-free window cleaning and roof-safe moss removal. Free quotes."
+>
+  <section class="section section--flush hero">
+    <div class="container">
+      <p class="kicker">Exterior cleaning · Seattle &amp; the Eastside</p>
+      <h1 class="display">Exterior cleaning, done properly.</h1>
+      <p class="lede">
+        Gargoyle is an owner-operated exterior cleaning company. Gutters are our
+        specialty — windows and roofs round out the job. One owner, seven years
+        of professional experience, zero shortcuts.
+      </p>
+      <div class="btn-row">
+        <a href="/contact" class="btn btn--accent">Get a free quote</a>
+        <a href="/services" class="btn btn--ghost">See our services</a>
+      </div>
+      <p class="hero-note muted">
+        The first gargoyles were carved waterspouts, built to throw rain clear of
+        the building. We took the name seriously.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <p class="kicker">What we do</p>
+      <h2 id="services-heading" class="title-lg">Three services. Done right, every time.</h2>
+      <div class="grid cols-3" style="margin-top: 3rem;">
+        <article class="card">
+          <span class="num">01</span>
+          <h3 class="title-md">Gutter cleaning<span class="tag">Specialty</span></h3>
+          <p>
+            Hand-cleared gutters, flushed downspouts, debris bagged and hauled
+            away — with before-and-after photos to prove it. The core of what we do.
+          </p>
+          <a href="/services#gutters" class="card-link">Gutter cleaning details →</a>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3 class="title-md">Window cleaning</h3>
+          <p>
+            Streak-free glass inside and out, plus the screens, tracks, and sills
+            most crews skip.
+          </p>
+          <a href="/services#windows" class="card-link">Window cleaning details →</a>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3 class="title-md">Roof cleaning &amp; moss removal</h3>
+          <p>
+            Roof-safe moss removal and preventive treatment. No pressure washers
+            on your shingles, ever.
+          </p>
+          <a href="/services#roof" class="card-link">Roof cleaning details →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <p class="kicker">Why Gargoyle</p>
+          <h2 id="why-heading" class="title-lg">Big-company experience. One-owner care.</h2>
+        </div>
+        <div class="grid cols-2">
+          <div>
+            <span class="num">01</span>
+            <h3 class="title-md">The owner does the work</h3>
+            <p class="muted">
+              Brandon Dudley spent seven years managing exterior cleaning
+              operations across Seattle, the Eastside, and Portland. He started
+              Gargoyle to do the work personally — and do it better.
+            </p>
+          </div>
+          <div>
+            <span class="num">02</span>
+            <h3 class="title-md">Firm quotes, straight answers</h3>
+            <p class="muted">
+              You get a clear price before we start, and it doesn't change on the
+              ladder. No surprise add-ons, no upselling.
+            </p>
+          </div>
+          <div>
+            <span class="num">03</span>
+            <h3 class="title-md">Proof, not promises</h3>
+            <p class="muted">
+              Every gutter and roof job comes with before-and-after photos, so
+              you can see exactly what was done — no climbing required.
+            </p>
+          </div>
+          <div>
+            <span class="num">04</span>
+            <h3 class="title-md">Respect for your home</h3>
+            <p class="muted">
+              Tidy work areas, plants protected, debris hauled away, gates closed
+              behind us. We leave the place cleaner than we found it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="process-heading">
+    <div class="container">
+      <p class="kicker">How it works</p>
+      <h2 id="process-heading" class="title-lg">Simple, from quote to walkthrough.</h2>
+      <ol class="process grid cols-4" style="margin-top: 3rem;">
+        <li>
+          <span class="num">01</span>
+          <h3 class="title-md">Tell us about the job</h3>
+          <p class="muted">Call, email, or use the quote form. A few details about your home are all we need.</p>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <h3 class="title-md">Get a firm quote</h3>
+          <p class="muted">Clear pricing, usually the same day. No site-visit runaround for standard jobs.</p>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <h3 class="title-md">We do the work</h3>
+          <p class="muted">On time, properly equipped, and careful with your property from start to finish.</p>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <h3 class="title-md">Walkthrough &amp; photos</h3>
+          <p class="muted">You see the results before we leave — including photos of the areas you can't.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="area-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <p class="kicker">Service area</p>
+          <h2 id="area-heading" class="title-lg">Seattle and the Eastside.</h2>
+          <p class="lede">
+            Based in Seattle, serving homes across the metro area. Nearby but not
+            on the list? Ask — we're flexible.
+          </p>
+        </div>
+        <ul class="area-list" aria-label="Cities we serve">
+          {SITE.areaServed.map((city) => <li>{city}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="title-lg">Gutters full? Let's fix that.</h2>
+      <div class="btn-row">
+        <a href="/contact" class="btn">Get a free quote</a>
+        <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
+          Call {SITE.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding-block: clamp(4.5rem, 11vw, 9rem);
+  }
+
+  .hero-note {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    max-width: 30em;
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+  }
+
+  .process {
+    list-style: none;
+    padding: 0;
+  }
+
+  .area-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    align-self: start;
+  }
+
+  .area-list li {
+    border-bottom: 1px solid var(--line);
+    padding: 0.6rem 0;
+    font-weight: 600;
+  }
+</style>

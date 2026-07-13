@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+
+<Base
+  title="About Gargoyle Exterior Cleaning — Owner-Operated in Seattle"
+  description="Gargoyle is owned and operated by Brandon Dudley, who spent seven years managing exterior cleaning across Seattle, the Eastside, and Portland before going out on his own."
+>
+  <section class="section section--flush">
+    <div class="container">
+      <p class="kicker">About</p>
+      <h1 class="display">The owner shows up.</h1>
+      <p class="lede">
+        Gargoyle is what happens when someone who managed exterior cleaning at
+        scale decides the work deserves more care than scale allows.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="story-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <p class="kicker">The story</p>
+          <h2 id="story-heading" class="title-lg">Seven years in, starting over on purpose.</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            Brandon Dudley spent seven years managing exterior cleaning
+            operations across Seattle, the Eastside, and Portland — building
+            schedules, training crews, handling quality control, and fielding the
+            calls when something wasn't right. He learned what makes this work go
+            well, and he watched what gets lost when a company grows past the
+            point where anyone's name is on the job.
+          </p>
+          <p>
+            Gargoyle is his answer: one owner, on the ladder, accountable for
+            every home. The experience of a large operation — the safety
+            practices, the right equipment, the systems that keep jobs on
+            schedule — with the care of someone whose reputation rides on your
+            gutters actually draining.
+          </p>
+          <p>
+            He quotes the job, does the job, and walks you through it when it's
+            done. If something's not right, you talk to the person who was on
+            your roof — because there isn't anyone else.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="name-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <p class="kicker">The name</p>
+          <h2 id="name-heading" class="title-lg">Why "Gargoyle"?</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            Gargoyles weren't put on cathedrals to look scary. They're
+            waterspouts — carved to catch rain off the roof and throw it clear of
+            the walls, so water never gets the chance to eat away at the
+            building. They've been protecting buildings from rain for about
+            seven hundred years.
+          </p>
+          <p>
+            That's the job description. Move the water, protect the house, stay
+            out of the way. We just do it with ladders instead of limestone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="values-heading">
+    <div class="container">
+      <p class="kicker">How we work</p>
+      <h2 id="values-heading" class="title-lg">Three commitments on every job.</h2>
+      <div class="grid cols-3" style="margin-top: 3rem;">
+        <div class="card">
+          <span class="num">01</span>
+          <h3 class="title-md">Care</h3>
+          <p>
+            Your home gets treated like it's ours — plants covered, work areas
+            kept tidy, everything hauled away, gates closed behind us.
+          </p>
+        </div>
+        <div class="card">
+          <span class="num">02</span>
+          <h3 class="title-md">Communication</h3>
+          <p>
+            Firm quotes before we start, photos when we finish, and a straight
+            answer if we find something that needs attention.
+          </p>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3 class="title-md">Consistency</h3>
+          <p>
+            The same person, the same standard, every visit. That's the point of
+            being owner-operated.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="title-lg">Talk to Brandon.</h2>
+      <div class="btn-row">
+        <a href="/contact" class="btn">Get a free quote</a>
+        <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
+          Call {SITE.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,47 @@
+---
+import { SITE } from '../consts';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="grid cols-4">
+      <div>
+        <a href="/" class="brand" aria-label="Gargoyle Exterior Cleaning — home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          GARGOYLE
+        </a>
+        <p class="muted" style="margin-top: 0.9rem; font-size: 0.9rem; max-width: 16em;">
+          {SITE.tagline}.
+        </p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="/services#gutters">Gutter cleaning</a></li>
+          <li><a href="/services#windows">Window cleaning</a></li>
+          <li><a href="/services#roof">Roof cleaning &amp; moss removal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Get a quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href={SITE.phoneHref}>{SITE.phone}</a></li>
+          <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+          <li class="muted">{SITE.hours}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {SITE.name} · Seattle, WA</span>
+      <span>Owner-operated · Licensed &amp; insured</span>
+    </div>
+  </div>
+</footer>
