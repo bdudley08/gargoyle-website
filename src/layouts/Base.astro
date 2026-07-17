@@ -17,9 +17,9 @@ const businessSchema = {
   '@type': 'LocalBusiness',
   '@id': `${SITE.url}/#business`,
   name: SITE.name,
-  description: `Owner-operated exterior cleaning company serving Seattle and the Eastside. Specializing in gutter cleaning, with professional window cleaning and roof moss removal.`,
+  description: `Owner-operated exterior cleaning company serving Seattle and the Eastside. Specializing in gutter cleaning, with professional window cleaning, roof moss removal, pressure washing, and solar panel cleaning.`,
   url: SITE.url,
-  telephone: '+1-206-555-0134',
+  telephone: '+1-425-435-4195',
   email: SITE.email,
   priceRange: '$$',
   founder: {
@@ -34,9 +34,11 @@ const businessSchema = {
     closes: '18:00',
   },
   makesOffer: [
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roof cleaning and moss removal' } },
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gutter cleaning' } },
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Window cleaning' } },
-    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roof cleaning and moss removal' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pressure washing' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Solar panel cleaning' } },
   ],
 };
 ---
