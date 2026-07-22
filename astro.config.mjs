@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: swap for the real domain once registered
-  site: 'https://www.gargoylecleaning.com',
+  site: 'https://gargoyleexteriors.com',
   integrations: [sitemap()],
 });
