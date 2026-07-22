@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { SITE } from '../consts';
+import jobSiteGargoyle from '../assets/job-site-gargoyle.jpg';
 ---
 
 <Base
-  title="About Gargoyle Exterior Cleaning — Owner-Operated in Seattle"
-  description="Gargoyle is owned and operated by Brandon Dudley, who spent seven years managing exterior cleaning across Seattle, the Eastside, and Portland before going out on his own."
+  title="About Gargoyle Exterior Cleaning — Owner-Operated in Bellevue & the Eastside"
+  description="Gargoyle is owned and operated by Brandon Dudley, who spent eight years managing exterior cleaning across Seattle, the Eastside, and Portland before going out on his own."
 >
   <section class="section section--flush">
     <div class="container">
@@ -23,11 +25,11 @@ import { SITE } from '../consts';
       <div class="grid split">
         <div>
           <p class="kicker">The story</p>
-          <h2 id="story-heading" class="title-lg">Seven years in, starting over on purpose.</h2>
+          <h2 id="story-heading" class="title-lg">Eight years in, starting over on purpose.</h2>
         </div>
         <div class="body-copy">
           <p>
-            Brandon Dudley spent seven years managing exterior cleaning
+            Brandon Dudley spent eight years managing exterior cleaning
             operations across Seattle, the Eastside, and Portland — building
             schedules, training crews, handling quality control, and fielding the
             calls when something wasn't right. He learned what makes this work go
@@ -60,16 +62,33 @@ import { SITE } from '../consts';
         </div>
         <div class="body-copy">
           <p>
-            Gargoyles weren't put on cathedrals to look scary. They're
-            waterspouts — carved to catch rain off the roof and throw it clear of
-            the walls, so water never gets the chance to eat away at the
-            building. They've been protecting buildings from rain for about
-            seven hundred years.
+            Gargoyles are best known as waterspouts — carved to catch rain off
+            the roof and throw it clear of the walls, so water never gets the
+            chance to eat away at the building. They've been protecting
+            buildings from rain for about seven hundred years.
           </p>
           <p>
-            That's the job description. Move the water, protect the house, stay
-            out of the way. We just do it with ladders instead of limestone.
+            The fierce faces weren't an accident, either. Medieval builders
+            carved them to look watchful and a little frightening on purpose —
+            folklore held that their grotesque expressions warded off evil
+            spirits and stood guard over the building and everyone inside it.
+            Waterspout by function, guardian by reputation.
           </p>
+          <p>
+            That's the job description, then and now. Move the water, keep
+            watch, protect the house. We just do it with ladders instead of
+            limestone.
+          </p>
+          <figure class="name-photo">
+            <Image
+              src={jobSiteGargoyle}
+              alt="A small stone gargoyle statue standing guard in a customer's garden"
+              width={680}
+              format="webp"
+              quality="high"
+            />
+            <figcaption class="muted">Spotted on a job site.</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -84,8 +103,9 @@ import { SITE } from '../consts';
           <span class="num">01</span>
           <h3 class="title-md">Care</h3>
           <p>
-            Your home gets treated like it's ours — plants covered, work areas
-            kept tidy, everything hauled away, gates closed behind us.
+            Your home gets treated like it's ours — work areas kept tidy,
+            debris blended in, composted, or bagged for you, gates closed
+            behind us.
           </p>
         </div>
         <div class="card">
@@ -114,9 +134,28 @@ import { SITE } from '../consts';
       <div class="btn-row">
         <a href="/contact" class="btn">Get a free quote</a>
         <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
-          Call {SITE.phone}
+          Call or text {SITE.phone}
         </a>
       </div>
     </div>
   </section>
 </Base>
+
+<style>
+  .name-photo {
+    max-width: 340px;
+    margin-top: 2rem;
+  }
+
+  .name-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+  }
+
+  .name-photo figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+  }
+</style>

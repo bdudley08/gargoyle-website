@@ -4,8 +4,8 @@ import { SITE } from '../consts';
 ---
 
 <Base
-  title="Get a Free Quote — Gargoyle Exterior Cleaning, Seattle & Eastside"
-  description="Request a free quote for gutter cleaning, window cleaning, roof moss removal, pressure washing, or solar panel cleaning in Seattle and the Eastside. Firm pricing, usually the same day."
+  title="Get a Free Quote — Gargoyle Exterior Cleaning, Bellevue & the Eastside"
+  description="Request a free quote for gutter cleaning, window cleaning, roof moss treatment, pressure washing, or solar panel cleaning in Bellevue and the Eastside, plus Seattle. Firm pricing, usually the same day."
 >
   <section class="section section--flush">
     <div class="container">
@@ -47,6 +47,7 @@ import { SITE } from '../consts';
         </div>
 
         <form name="quote" method="POST" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="quote" />
           <p hidden aria-hidden="true">
             <label>Don't fill this out: <input name="company" /></label>
           </p>
@@ -72,11 +73,12 @@ import { SITE } from '../consts';
             <label for="service">Service needed</label>
             <select id="service" name="service" required>
               <option value="">Choose a service…</option>
-              <option>Roof cleaning &amp; moss removal</option>
               <option>Gutter cleaning</option>
-              <option>Window cleaning</option>
+              <option>Roof cleaning &amp; moss removal</option>
               <option>Pressure washing</option>
+              <option>Window cleaning</option>
               <option>Solar panel cleaning</option>
+              <option>GEM Club membership</option>
               <option>Combination / not sure yet</option>
             </select>
           </div>

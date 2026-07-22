@@ -1,0 +1,352 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+
+<Base
+  title="Join the GEM Club — Recurring Exterior Maintenance | Gargoyle Exterior Cleaning"
+  description="The GEM Club is Gargoyle's recurring maintenance program for Bellevue and Eastside homes — scheduled gutter, window, and roof care, a condition report every visit, and a straight answer when we spot something that needs attention."
+>
+  <section class="section section--flush">
+    <div class="container">
+      <img src="/gem-hex-icon.png" alt="" width="201" height="220" class="gem-icon" />
+      <p class="kicker">GEM Club</p>
+      <h1 class="display">We don't just clean.<br />We watch.</h1>
+      <p class="lede">
+        The Gargoyle Exterior Maintenance Program is recurring service built
+        around one idea: a home looked after regularly stays healthier — and
+        cheaper to maintain — than one that only gets attention when
+        something's already wrong.
+      </p>
+      <div class="btn-row">
+        <a href="/contact" class="btn btn--accent">Join the GEM Club</a>
+        <a href="#plans" class="btn btn--ghost">See the plans</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="GEM Club program mark">
+    <div class="container">
+      <img
+        src="/gem-lockup-dark.png"
+        alt="Gargoyle Exterior Cleaning Maintenance Program"
+        width="1140"
+        height="413"
+        class="gem-card"
+      />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="idea-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <p class="kicker">The idea</p>
+          <h2 id="idea-heading" class="title-lg">We watch over the house, not just the gutters.</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            A one-time cleaning solves what you can already see. GEM Club
+            membership means we're back on a schedule, so the same person who
+            cleared your gutters last spring is the one who notices this
+            fall that a downspout has started pulling away from the fascia —
+            before it becomes a repair instead of a fix.
+          </p>
+          <p>
+            That's the relationship we're after. Every visit, we do the job
+            you hired us for, and we keep an eye on everything else while
+            we're up there. If we spot something outside the scope of that
+            visit — trim rot, a failing seal, moss creeping somewhere new —
+            you hear about it in plain language, with photos, even though
+            it's not what we came to do. No upsell pressure, just what we'd
+            want to know about our own house.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plans" aria-labelledby="plans-heading">
+    <div class="container">
+      <p class="kicker">Membership plans</p>
+      <h2 id="plans-heading" class="title-lg">Two visits a year. Three ways to cover your home.</h2>
+      <p class="lede">
+        Every plan runs on the same rhythm — one visit in fall/winter, one in
+        spring/summer — so your home gets attention right when the seasons
+        call for it.
+      </p>
+
+      <div class="plans">
+        <article class="plan-card">
+          <h3 class="title-md">GEM Watch</h3>
+          <p class="plan-discount">10% member discount</p>
+          <p class="plan-season-label plan-season-label--fw">Fall / Winter</p>
+          <ul class="season-list season-list--fw">
+            <li>Gutter cleaning</li>
+            <li>Roof moss treatment</li>
+          </ul>
+          <p class="plan-season-label plan-season-label--ss">Spring / Summer</p>
+          <ul class="season-list season-list--ss">
+            <li>Gutter cleaning</li>
+          </ul>
+          <a href="/contact" class="btn btn--ghost plan-cta">Start GEM Watch</a>
+        </article>
+
+        <article class="plan-card plan-card--featured">
+          <span class="tag plan-tag">Most popular</span>
+          <h3 class="title-md">GEM Guardian</h3>
+          <p class="plan-discount">15% member discount</p>
+          <p class="plan-season-label plan-season-label--fw">Fall / Winter</p>
+          <ul class="season-list season-list--fw">
+            <li>Gutter cleaning</li>
+            <li>Roof moss treatment</li>
+          </ul>
+          <p class="plan-season-label plan-season-label--ss">Spring / Summer</p>
+          <ul class="season-list season-list--ss">
+            <li>Gutter cleaning</li>
+            <li>Pressure washing</li>
+            <li>Window cleaning (exterior)</li>
+            <li>Solar panel cleaning*</li>
+          </ul>
+          <a href="/contact" class="btn btn--accent plan-cta">Start GEM Guardian</a>
+        </article>
+
+        <article class="plan-card">
+          <h3 class="title-md">GEM Sentinel</h3>
+          <p class="plan-discount">20% member discount</p>
+          <p class="plan-season-label plan-season-label--fw">Fall / Winter</p>
+          <ul class="season-list season-list--fw">
+            <li>Gutter cleaning</li>
+            <li>Roof moss treatment</li>
+            <li>Pressure washing</li>
+            <li>Window cleaning (exterior)</li>
+            <li>Solar panel cleaning*</li>
+          </ul>
+          <p class="plan-season-label plan-season-label--ss">Spring / Summer</p>
+          <ul class="season-list season-list--ss">
+            <li>Gutter cleaning</li>
+            <li>Pressure washing</li>
+            <li>Exterior gutter cleaning</li>
+            <li>Window cleaning (interior &amp; exterior)</li>
+            <li>Solar panel cleaning*</li>
+          </ul>
+          <a href="/contact" class="btn btn--ghost plan-cta">Start GEM Sentinel</a>
+        </article>
+      </div>
+      <p class="muted plan-legend">*Solar panel cleaning included where applicable.</p>
+
+      <div class="plan-custom">
+        <h3 class="title-md">Not sure which fits?</h3>
+        <p class="muted">
+          Tell us what you want covered and how often — we'll build a plan
+          around your home instead of the other way around.
+        </p>
+        <a href="/contact" class="card-link">Build a custom plan →</a>
+      </div>
+
+      <p class="muted plan-note">
+        No contract — cancel anytime. Invoiced after each visit; pay however's
+        easiest (cash, check, Venmo, or Zelle).
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="included-heading">
+    <div class="container">
+      <p class="kicker">Every plan</p>
+      <h2 id="included-heading" class="title-lg">The same watchfulness, at every tier</h2>
+      <ul class="checklist" style="margin-top: 2.5rem; max-width: 40em;">
+        <li>Priority scheduling ahead of one-time customers</li>
+        <li>A condition report with photos after every visit</li>
+        <li>A straight-talk flag on anything we notice, even outside that visit's scope</li>
+        <li>One point of contact who already knows your house and its history</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <p class="kicker">How it works</p>
+      <h2 id="how-heading" class="title-lg">Simple to join, easy to forget about — in a good way.</h2>
+      <div class="grid cols-4" style="margin-top: 3rem;">
+        <div class="card">
+          <span class="num">01</span>
+          <h3 class="title-md">Walkthrough</h3>
+          <p class="muted">We look at your home — in person or by photo — and build a visit schedule that fits it.</p>
+        </div>
+        <div class="card">
+          <span class="num">02</span>
+          <h3 class="title-md">Scheduled visits</h3>
+          <p class="muted">A fall/winter visit and a spring/summer visit, scoped to whichever plan you pick.</p>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3 class="title-md">A report every time</h3>
+          <p class="muted">Photos, notes, and a plain-language rundown after every visit.</p>
+        </div>
+        <div class="card">
+          <span class="num">04</span>
+          <h3 class="title-md">We fix or flag what we find</h3>
+          <p class="muted">Minor fixes happen on the spot. Anything bigger, you hear it from us first — with a referral if you want one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading" class="title-lg">Ready to stop thinking about it?</h2>
+      <div class="btn-row">
+        <a href="/contact" class="btn">Join the GEM Club</a>
+        <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
+          Call or text {SITE.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .gem-icon {
+    width: 64px;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .gem-card {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .plans {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, auto);
+    column-gap: clamp(1.5rem, 3vw, 2.5rem);
+    row-gap: 0;
+  }
+
+  .plan-card {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: subgrid;
+    row-gap: 0.85rem;
+    align-content: start;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 1.75rem 1.5rem;
+  }
+
+  .plan-card--featured {
+    border: 2px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+  }
+
+  .plan-tag {
+    grid-row: 1;
+    align-self: start;
+    margin: 0;
+  }
+
+  .plan-card > .title-md {
+    grid-row: 2;
+  }
+
+  .plan-discount {
+    grid-row: 3;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .plan-season-label--fw {
+    grid-row: 4;
+  }
+
+  .season-list--fw {
+    grid-row: 5;
+  }
+
+  .plan-season-label--ss {
+    grid-row: 6;
+  }
+
+  .season-list--ss {
+    grid-row: 7;
+  }
+
+  .plan-season-label {
+    align-self: end;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  .season-list {
+    align-self: start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .season-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .season-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .plan-cta {
+    grid-row: 8;
+    align-self: end;
+    display: block;
+    width: 100%;
+    padding: 1.05rem 1.6rem;
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .plan-legend {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .plan-custom {
+    border-top: 1px solid var(--line);
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+
+  .plan-note {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 759px) {
+    .plans {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+      row-gap: 2rem;
+    }
+
+    .plan-card {
+      display: block;
+    }
+  }
+</style>

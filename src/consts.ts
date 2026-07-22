@@ -4,14 +4,13 @@ export const SITE = {
   name: 'Gargoyle Exterior Cleaning',
   shortName: 'Gargoyle',
   url: 'https://www.gargoylecleaning.com',
-  tagline: 'Gutter, window & roof cleaning for Seattle and the Eastside',
+  tagline: 'Gutter, window & roof cleaning for Bellevue and the Eastside, plus Seattle',
   phone: '425.435.4195',
   phoneHref: 'tel:+14254354195',
-  email: 'hello@gargoylecleaning.com',
+  email: 'hello@gargoyleexteriors.com',
   hours: 'Mon–Sat, 8am–6pm',
   owner: 'Brandon Dudley',
   areaServed: [
-    'Seattle',
     'Bellevue',
     'Kirkland',
     'Redmond',
@@ -21,5 +20,6 @@ export const SITE = {
     'Bothell',
     'Woodinville',
     'Renton',
+    'Seattle',
   ],
 };

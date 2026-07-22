@@ -1,6 +1,16 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { SITE } from '../consts';
+import pwBefore from '../assets/proof/pressure-washing-patio-before.jpg';
+import pwAfter from '../assets/proof/pressure-washing-patio-after.jpg';
+import roofBefore from '../assets/proof/roof-moss-before.jpg';
+import roofAfter from '../assets/proof/roof-moss-after.jpg';
+import gutterBefore from '../assets/proof/gutter-cleaning-before.jpg';
+import gutterAfter from '../assets/proof/gutter-cleaning-after.jpg';
+import windowSqueegee from '../assets/window-cleaning-squeegee.jpg';
+import windowWaterfedPole from '../assets/window-cleaning-waterfed-pole.jpg';
+import solarWaterfedPole from '../assets/solar-panel-cleaning-waterfed-pole.jpg';
 
 const faqs = [
   {
@@ -16,8 +26,12 @@ const faqs = [
     a: 'Never. Pressure washing strips granules off asphalt shingles and voids many roof warranties. We remove moss by hand and with soft brushing, then apply a treatment that keeps it from coming back.',
   },
   {
+    q: 'Do I need full moss removal, or just a treatment?',
+    a: "It depends on how established the moss is. Light growth, or a roof that's just starting to show it, usually only needs a preventative treatment — no removal necessary. Once it's built up into thick, clumpy patches, we remove it by hand first, then treat. We'll tell you honestly which one your roof needs before any work starts.",
+  },
+  {
     q: 'Are you licensed and insured?',
-    a: 'Yes. Gargoyle is a licensed and insured Washington business, and proof of insurance is available on request.',
+    a: "Gargoyle is bonded. Washington business license and general liability insurance are in their final steps — ask any time for current status.",
   },
   {
     q: 'How does pricing work?',
@@ -37,8 +51,8 @@ const faqSchema = {
 ---
 
 <Base
-  title="Gutter, Window & Roof Cleaning Services in Seattle — Gargoyle Exterior Cleaning"
-  description="Detailed exterior cleaning services for Seattle and Eastside homes: specialist gutter cleaning with photo proof, interior/exterior window cleaning, and roof-safe moss removal."
+  title="Gutter, Window & Roof Cleaning Services in Bellevue & the Eastside — Gargoyle Exterior Cleaning"
+  description="Detailed exterior cleaning services for Bellevue, Eastside, and Seattle homes: specialist gutter cleaning with photo proof, interior/exterior window cleaning, and roof-safe moss removal."
 >
   <section class="section section--flush">
     <div class="container">
@@ -51,50 +65,11 @@ const faqSchema = {
     </div>
   </section>
 
-  <section class="section" id="roof" aria-labelledby="roof-heading">
-    <div class="container">
-      <div class="grid split">
-        <div>
-          <span class="num">01</span>
-          <h2 id="roof-heading" class="title-lg">Roof cleaning &amp; moss removal</h2>
-          <p class="lede">
-            Moss holds moisture against your shingles and pries them apart as it
-            grows. In this climate, it's not cosmetic — it shortens the life of
-            the roof.
-          </p>
-        </div>
-        <div class="body-copy">
-          <p>
-            We remove moss the way roofing manufacturers recommend: by hand and
-            with soft brushing, never a pressure washer. Loose debris is blown or
-            brushed off, valleys and problem spots get extra attention, and a
-            zinc-based treatment is applied to keep moss from re-establishing.
-            Because moss ends up in the gutters, every roof job includes a gutter
-            check.
-          </p>
-          <h3 class="title-md" style="margin-top: 2rem;">Every roof job includes</h3>
-          <ul class="checklist">
-            <li>Hand and soft-brush moss removal — no pressure washing</li>
-            <li>Roof debris cleared from valleys, crickets, and behind chimneys</li>
-            <li>Zinc-based moss treatment to slow regrowth</li>
-            <li>Gutter and downspout check after the work</li>
-            <li>Before-and-after photos of the full roof</li>
-            <li>Notes on any shingle damage we spot while up there</li>
-          </ul>
-          <p class="muted" style="margin-top: 1.5rem;">
-            Best done in dry weather. If your roof is heavily covered, earlier is
-            always cheaper than later.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="gutters" aria-labelledby="gutters-heading">
     <div class="container">
       <div class="grid split">
         <div>
-          <span class="num">02</span>
+          <span class="num">01</span>
           <h2 id="gutters-heading" class="title-lg">
             Gutter cleaning<span class="tag">Our specialty</span>
           </h2>
@@ -106,63 +81,138 @@ const faqSchema = {
         </div>
         <div class="body-copy">
           <p>
-            We clean gutters by hand, not with a blower from the ground. Every
-            run is cleared, every downspout is flushed and confirmed flowing, and
-            all debris leaves with us. While we're up there, we look for the
-            small problems — loose hangers, failing seams, sagging runs — and
-            flag them with photos so nothing surprises you later.
+            We clear gutters by blower or by hand, whichever the run calls
+            for. Every run is cleared, every downspout is flushed and confirmed flowing
+            all the way to ground level, and debris is blended into the
+            landscape, composted, or bagged for you — never left in a pile.
+            We also clear debris from valleys and behind the chimney and
+            skylights, since it washes straight into the gutters otherwise.
+            While we're up there, we look for the small problems — loose
+            hangers, a gutter spike working its way out, a failing seam. What
+            we can fix on the spot, we do. Anything bigger gets flagged with
+            photos, plus a referral to a roofer or contractor we trust if you
+            want one.
           </p>
           <h3 class="title-md" style="margin-top: 2rem;">Every gutter job includes</h3>
           <ul class="checklist">
-            <li>All gutters cleared by hand, roof edge to roof edge</li>
-            <li>Downspouts flushed and tested for flow</li>
-            <li>Debris bagged and hauled away — nothing left on your lawn</li>
+            <li>All gutters cleared by blower or by hand, roof edge to roof edge</li>
+            <li>Downspouts flushed and confirmed flowing all the way to ground level</li>
+            <li>Debris cleared from valleys and behind the chimney and skylights</li>
+            <li>Debris blended in, composted, or bagged for you — nothing left in a pile</li>
             <li>Before-and-after photos of every run</li>
-            <li>A quick condition report flagging any issues we spot</li>
-            <li>Gutter guard and screen cleaning where installed</li>
+            <li>Minor fixes made on the spot — loose spikes and hangers resecured — plus a condition report flagging anything bigger</li>
+            <li>Tops of gutter guards and screens cleared where installed</li>
           </ul>
           <p class="muted" style="margin-top: 1.5rem;">
             Most Seattle-area homes need this twice a year: after leaf-fall and
-            again in spring. Ask about scheduled maintenance so you never have to
-            think about it.
+            again in spring. Join the <a href="/gem-club">GEM Club</a> so you
+            never have to think about it.
           </p>
         </div>
+      </div>
+      <div class="grid cols-2 proof">
+        <figure class="proof-shot">
+          <span class="proof-label">Before</span>
+          <Image
+            src={gutterBefore}
+            alt="A gutter packed with leaves and debris before cleaning"
+            width={800}
+            format="webp"
+            quality="high"
+          />
+        </figure>
+        <figure class="proof-shot">
+          <span class="proof-label">After</span>
+          <Image
+            src={gutterAfter}
+            alt="The same gutter after cleaning, cleared down to bare metal"
+            width={800}
+            format="webp"
+            quality="high"
+          />
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section" id="windows" aria-labelledby="windows-heading">
+  <section class="section" id="roof" aria-labelledby="roof-heading">
     <div class="container">
       <div class="grid split">
         <div>
-          <span class="num">03</span>
-          <h2 id="windows-heading" class="title-lg">Window cleaning</h2>
+          <span class="num">02</span>
+          <h2 id="roof-heading" class="title-lg">Roof cleaning &amp; moss removal</h2>
           <p class="lede">
-            Clean glass changes how a whole house feels — from the inside more
-            than the outside.
+            Moss holds moisture against your shingles and pries them apart as it
+            grows. In this climate, it's not cosmetic — it shortens the life of
+            the roof.
           </p>
         </div>
         <div class="body-copy">
           <p>
-            We clean interior and exterior glass with professional squeegee work,
-            not a garden hose and a prayer. Screens are washed, tracks and sills
-            are wiped out, and hard-water stains get proper treatment rather than
-            a smear-around. Skylights and hard-to-reach glass are welcome.
+            Roof cleaning covers two separate things, and not every roof
+            needs both.
           </p>
-          <h3 class="title-md" style="margin-top: 2rem;">Every window job includes</h3>
+          <h3 class="title-md" style="margin-top: 2rem;">Debris removal</h3>
+          <p>
+            Leaves, needles, cones, and branches build up and hold moisture
+            against the shingles even without a hint of moss. We clear the
+            entire roof by hand and blower — not just the valleys and behind
+            the chimney — no pressure washer, ever.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Moss treatment or removal</h3>
+          <p>
+            Moss on a Pacific Northwest roof isn't a sign anything's broken —
+            it's just what shade, cool temperatures, and damp weather do here,
+            especially on north-facing slopes under tree cover. How we treat
+            it depends on how far it's gotten. Light coverage gets a
+            preventative treatment alone — no scrubbing needed. Once moss has
+            built up into thick, clumpy growth, we remove it first: brushed
+            and blown off by hand, never scraped or pressure washed, since
+            forcing embedded moss loose can pull shingle granules with it.
+            Either way, we finish by treating the entire roof with a wet or
+            dry treatment — not just the spots with visible moss — which
+            kills what's there and slows regrowth everywhere else. Expect the
+            moss to die back and rinse away with normal rain over the
+            following few weeks — not disappear overnight.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Every roof job includes</h3>
           <ul class="checklist">
-            <li>Exterior glass, squeegeed streak-free</li>
-            <li>Interior glass on request — shoes off, drop cloths down</li>
-            <li>Screens removed, washed, and reinstalled</li>
-            <li>Tracks and sills wiped clean</li>
-            <li>Hard-water spot treatment where needed</li>
-            <li>Skylights and specialty glass</li>
+            <li>Debris cleared from the entire roof, not just the valleys and behind the chimney</li>
+            <li>An honest look at how established any moss is before we recommend removal or treatment alone</li>
+            <li>Hand-brushing and blowing for any built-up moss — no pressure washing, ever</li>
+            <li>A wet or dry treatment applied to the entire roof, to kill existing moss and slow regrowth everywhere</li>
+            <li>Gutter and downspout check after the work</li>
+            <li>Before-and-after photos of the full roof</li>
+            <li>Minor shingle repairs made on the spot where we can, and a referral to a trusted roofer for anything more extensive</li>
           </ul>
           <p class="muted" style="margin-top: 1.5rem;">
-            Pairs well with a gutter visit — bundling services on one trip saves
-            you money.
+            Catch moss early and a yearly treatment alone often keeps a roof
+            clear — wait too long and full removal costs more than
+            prevention would have.
           </p>
         </div>
+      </div>
+      <div class="grid cols-2 proof">
+        <figure class="proof-shot">
+          <span class="proof-label">Before</span>
+          <Image
+            src={roofBefore}
+            alt="A roof heavily covered in pine needles and moss before cleaning"
+            width={800}
+            format="webp"
+            quality="high"
+          />
+        </figure>
+        <figure class="proof-shot">
+          <span class="proof-label">After</span>
+          <Image
+            src={roofAfter}
+            alt="The same roof after debris and moss removal, shingles clear"
+            width={800}
+            format="webp"
+            quality="high"
+          />
+        </figure>
       </div>
     </div>
   </section>
@@ -171,27 +221,33 @@ const faqSchema = {
     <div class="container">
       <div class="grid split">
         <div>
-          <span class="num">04</span>
+          <span class="num">03</span>
           <h2 id="pressure-washing-heading" class="title-lg">Pressure washing</h2>
           <p class="lede">
-            Driveways, walkways, patios, decks, fences, and siding — cleaned with
-            the right pressure for the surface, not a one-setting blast.
+            Driveways, patios, sidewalks, and walkways — cleaned with real
+            pressure, not a garden-hose rinse.
           </p>
         </div>
         <div class="body-copy">
           <p>
-            Concrete and pavers can take real pressure; wood, siding, and painted
-            surfaces need a gentler touch and the right detergent. We match the
-            equipment to the material so you get clean results without stripped
-            paint, gouged wood, or etched concrete. This does not include
-            roofing — see roof cleaning above for why.
+            Pressure washing is concrete-focused: driveways, patios,
+            sidewalks, and walkways. We pretreat with an SH (sodium
+            hypochlorite) solution to break down algae, mildew, and grime,
+            then finish with pressure suited to the surface. This does not
+            include roofing — see roof cleaning above for why.
+          </p>
+          <p>
+            Wood decks and other surfaces are handled case by case, not as a
+            standing service — ask and we'll tell you honestly whether it's a
+            good fit. We never pressure wash siding; it's too easy to force
+            water behind it and cause damage that doesn't show up until
+            later.
           </p>
           <h3 class="title-md" style="margin-top: 2rem;">Every pressure washing job includes</h3>
           <ul class="checklist">
-            <li>Driveways, walkways, and patios cleaned edge to edge</li>
-            <li>Decks, fences, and siding washed at surface-safe pressure</li>
-            <li>Oil stains, algae, and organic growth pretreated</li>
-            <li>Plants, landscaping, and outdoor furniture protected</li>
+            <li>Removes algae, mildew, and embedded grime from concrete and pavers</li>
+            <li>Reduces slip hazards on sidewalks and walkways</li>
+            <li>Protects surface materials from long-term organic buildup</li>
             <li>Runoff cleared from drains and walkways</li>
             <li>Before-and-after photos of every area cleaned</li>
           </ul>
@@ -200,6 +256,82 @@ const faqSchema = {
             full exterior refresh.
           </p>
         </div>
+      </div>
+      <div class="grid cols-2 proof">
+        <figure class="proof-shot">
+          <span class="proof-label">Before</span>
+          <Image
+            src={pwBefore}
+            alt="A concrete patio streaked with grime and moss along the edges before pressure washing"
+            width={800}
+            format="webp"
+            quality="high"
+          />
+        </figure>
+        <figure class="proof-shot">
+          <span class="proof-label">After</span>
+          <Image
+            src={pwAfter}
+            alt="The same patio after pressure washing, concrete restored to a clean, even gray"
+            width={800}
+            format="webp"
+            quality="high"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="windows" aria-labelledby="windows-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <span class="num">04</span>
+          <h2 id="windows-heading" class="title-lg">Window cleaning</h2>
+          <p class="lede">
+            Clean glass changes how a whole house feels — from the inside more
+            than the outside.
+          </p>
+        </div>
+        <div class="body-copy">
+          <p>
+            We clean exterior glass with mop and squeegee or a water-fed
+            pole, whichever the window calls for — the water-fed pole
+            reaches upper stories and hard-to-reach glass without a ladder
+            against the house, and mop and squeegee handles everything else.
+            Screens are brushed off and tracks and sills are wiped out, not
+            just eyeballed. Screens that need more than a brush — a deep
+            clean — are available as an add-on.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Every window job includes</h3>
+          <ul class="checklist">
+            <li>Exterior glass cleaned by mop and squeegee or water-fed pole</li>
+            <li>Interior glass on request — shoes off, drop cloths down</li>
+            <li>Screens brushed off (deep screen clean available as an add-on)</li>
+            <li>Tracks and sills wiped clean</li>
+            <li>Skylights and hard-to-reach glass</li>
+          </ul>
+          <p class="muted" style="margin-top: 1.5rem;">
+            Pairs well with a gutter visit — bundling services on one trip saves
+            you money.
+          </p>
+        </div>
+      </div>
+      <div class="grid cols-2 illustration">
+        <Image
+          src={windowSqueegee}
+          alt="A squeegee clearing soapy water from a window pane"
+          width={800}
+          format="webp"
+          quality="high"
+        />
+        <Image
+          src={windowWaterfedPole}
+          alt="A water-fed pole with a brush head cleaning an upper-story window, water sheeting down the glass"
+          width={800}
+          format="webp"
+          quality="high"
+        />
       </div>
     </div>
   </section>
@@ -236,6 +368,15 @@ const faqSchema = {
           </p>
         </div>
       </div>
+      <div class="illustration illustration--single">
+        <Image
+          src={solarWaterfedPole}
+          alt="A soft-bristle brush on a water-fed pole cleaning a solar panel, water sheeting across the cells"
+          width={1000}
+          format="webp"
+          quality="high"
+        />
+      </div>
     </div>
   </section>
 
@@ -260,7 +401,7 @@ const faqSchema = {
       <div class="btn-row">
         <a href="/contact" class="btn">Get a free quote</a>
         <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
-          Call {SITE.phone}
+          Call or text {SITE.phone}
         </a>
       </div>
     </div>
@@ -270,6 +411,53 @@ const faqSchema = {
 </Base>
 
 <style>
+  .illustration {
+    margin-top: 3rem;
+  }
+
+  .illustration--single {
+    max-width: 640px;
+  }
+
+  .illustration img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--line);
+  }
+
+  .proof {
+    margin-top: 3rem;
+  }
+
+  .proof-shot {
+    position: relative;
+    border: 1px solid var(--line);
+  }
+
+  .proof-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .proof-label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.6rem;
+  }
+
   .faq {
     margin-top: 2.5rem;
     max-width: 46em;

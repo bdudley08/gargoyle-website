@@ -2,6 +2,7 @@
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const links = [
   { href: '/services', label: 'Services' },
+  { href: '/gem-club', label: 'GEM Club' },
   { href: '/about', label: 'About' },
 ];
 ---
@@ -9,7 +10,9 @@ const links = [
 <header class="site-header">
   <div class="container">
     <a href="/" class="brand" aria-label="Gargoyle Exterior Cleaning — home">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-mark" aria-hidden="true">
+        <img src="/gargoyle-mark.png" alt="" width="480" height="480" />
+      </span>
       GARGOYLE
     </a>
     <nav class="site-nav" aria-label="Main">
