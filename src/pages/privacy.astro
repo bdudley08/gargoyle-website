@@ -1,0 +1,104 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+const updated = 'July 23, 2026';
+---
+
+<Base
+  title="Privacy Policy — Gargoyle Exterior Cleaning"
+  description="How Gargoyle Exterior Cleaning collects, uses, and protects the information you share through this website."
+>
+  <section class="section section--flush">
+    <div class="container">
+      <p class="kicker">Privacy</p>
+      <h1 class="display">Privacy policy.</h1>
+      <p class="lede">
+        The short version: we only collect what we need to quote and do your
+        job, we don't sell it, and we don't share it beyond the handful of
+        services that keep this website and our email running.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="policy-heading">
+    <div class="container">
+      <div class="body-copy" style="max-width: 44em;">
+        <h2 id="policy-heading" class="title-md">What we collect</h2>
+        <p>
+          When you fill out the quote form on this site, we collect the
+          information you enter — your name, phone number, email address,
+          street address and city, the service you're interested in, and
+          anything you write in the message field. If you call, text, or
+          email us instead, we have whatever you choose to share that way.
+        </p>
+
+        <h2 class="title-md" style="margin-top: 2.5rem;">Why we collect it</h2>
+        <p>
+          We use your information for one purpose: to respond to you, prepare
+          a quote, schedule and complete your service, and stay in touch about
+          that work. We don't sell your information, rent it, or hand it to
+          anyone for advertising.
+        </p>
+
+        <h2 class="title-md" style="margin-top: 2.5rem;">Who handles it</h2>
+        <p>
+          A few trusted services make this website and our communication work,
+          and your information passes through them:
+        </p>
+        <ul class="checklist">
+          <li>
+            <strong>Netlify</strong> hosts this website and processes quote-form
+            submissions, then emails them to us.
+          </li>
+          <li>
+            <strong>Google Workspace</strong> handles our business email, so
+            our replies and your messages live there.
+          </li>
+          <li>
+            <strong>Cloudflare Web Analytics</strong> gives us basic, anonymous
+            visitor counts. It doesn't use cookies and doesn't track you as an
+            individual across sites.
+          </li>
+        </ul>
+        <p style="margin-top: 1.25rem;">
+          Each of these has its own privacy practices, and we don't control how
+          they operate beyond the service they provide us.
+        </p>
+
+        <h2 class="title-md" style="margin-top: 2.5rem;">Cookies and tracking</h2>
+        <p>
+          This site doesn't set advertising or tracking cookies, and we don't
+          run ad-network trackers on it. Our analytics are cookie-free.
+        </p>
+
+        <h2 class="title-md" style="margin-top: 2.5rem;">How long we keep it</h2>
+        <p>
+          We hold onto quote requests and job records for as long as we need
+          them to serve you and keep reasonable business records. If you'd like
+          us to delete your information, just ask and we will, unless we're
+          required to keep something for legal or tax reasons.
+        </p>
+
+        <h2 class="title-md" style="margin-top: 2.5rem;">Your choices</h2>
+        <p>
+          You can ask us what information we have about you, ask us to correct
+          it, or ask us to delete it. Reach out any time and we'll take care of
+          it.
+        </p>
+
+        <h2 class="title-md" style="margin-top: 2.5rem;">Questions</h2>
+        <p>
+          Email us at <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or call
+          or text <a href={SITE.phoneHref}>{SITE.phone}</a> with anything about
+          this policy or your information.
+        </p>
+
+        <p class="muted" style="margin-top: 2.5rem; font-size: 0.9rem;">
+          Last updated {updated}. If we change how we handle your information,
+          we'll update this page.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
