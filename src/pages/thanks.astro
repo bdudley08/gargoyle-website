@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+---
+
+<Base
+  title="Thanks — Gargoyle Exterior Cleaning"
+  description="Your quote request has been received. Gargoyle Exterior Cleaning will be in touch within one business day."
+>
+  <section class="section section--flush" style="padding-block: clamp(5rem, 14vw, 10rem);">
+    <div class="container">
+      <p class="kicker">Request received</p>
+      <h1 class="display">Got it.</h1>
+      <p class="lede">
+        Your quote request is in. We reply within one business day —
+        usually much faster. If it's urgent, call or text us directly.
+      </p>
+      <div class="btn-row">
+        <a href="/" class="btn">Back to home</a>
+        <a href={SITE.phoneHref} class="btn btn--ghost" style="color: inherit; border-color: currentColor;">
+          Call or text {SITE.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
