@@ -20,5 +20,7 @@ export const SITE = {
     'Woodinville',
     'Renton',
     'Seattle',
+    'Lynnwood',
+    'North Bend',
   ],
 };
