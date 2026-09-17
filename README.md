@@ -23,10 +23,12 @@ All business details live in one place: [`src/consts.ts`](src/consts.ts).
 2. **Phone** — `(206) 555-0134` is a fictional 555 number. Replace it in
    `src/consts.ts` and in the JSON-LD block in `src/layouts/Base.astro`.
 3. **Email** — `hello@gargoylecleaning.com` is a placeholder in `src/consts.ts`.
-4. **Contact form** — the form on `/contact` is marked up for
-   [Netlify Forms](https://docs.netlify.com/forms/setup/) and works
-   automatically if deployed to Netlify. On any other host, point it at
-   [Formspree](https://formspree.io) or similar by adding an `action` URL.
+4. **Contact form** — done. `/contact` embeds Jobber's work request form,
+   so submissions create a request and a lead directly in Jobber. The
+   fields are edited in Jobber (Settings → Work Request form), not here.
+   The embed `<script>` must keep its `is:inline` directive — without it
+   Astro bundles the script and strips the `clienthub_id` and `form_url`
+   attributes, and the form silently renders as an empty space.
 5. **Photos** — the site is intentionally photo-free right now. Real
    before/after job photos (with `alt` text) would strengthen both trust
    and SEO when Brandon has them.
