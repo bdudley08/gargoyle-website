@@ -55,55 +55,27 @@ import { SITE } from '../consts';
           </p>
         </div>
 
-        <form name="quote" method="POST" data-netlify="true" netlify-honeypot="company" action="/thanks">
-          <input type="hidden" name="form-name" value="quote" />
-          <p hidden aria-hidden="true">
-            <label>Don't fill this out: <input name="company" /></label>
-          </p>
-          <div class="grid cols-2" style="gap: 0 1.25rem;">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-            </div>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-          <div class="field">
-            <label for="address">Street address &amp; city</label>
-            <input id="address" name="address" type="text" autocomplete="street-address" required />
-          </div>
-          <div class="field">
-            <label for="service">Service needed</label>
-            <select id="service" name="service" required>
-              <option value="">Choose a service…</option>
-              <option>Gutter cleaning</option>
-              <option>Roof cleaning &amp; moss removal</option>
-              <option>Pressure washing</option>
-              <option>Window cleaning</option>
-              <option>Solar panel cleaning</option>
-              <option>GEM Club membership</option>
-              <option>Combination / not sure yet</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Anything we should know?</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Two stories? Heavy tree cover? Gutter guards? Every detail helps."></textarea>
-          </div>
-          <button type="submit" class="btn btn--accent">Request my quote</button>
+        <div class="quote-form">
+          {/* Jobber work request form. The script must stay `is:inline` —
+              without it Astro bundles the script and strips the custom
+              clienthub_id / form_url attributes, which silently breaks the
+              embed. Managed in Jobber under Settings → Work Request form. */}
+          <div id="9ca0bb84-b482-474f-824a-4809cd551054-5066835"></div>
+          <link
+            rel="stylesheet"
+            href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"
+            media="screen"
+          />
+          <script
+            is:inline
+            src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js"
+            clienthub_id="9ca0bb84-b482-474f-824a-4809cd551054-5066835"
+            form_url="https://clienthub.getjobber.com/client_hubs/9ca0bb84-b482-474f-824a-4809cd551054/public/work_request/embedded_work_request_form?form_id=5066835"
+          ></script>
           <p class="muted" style="margin-top: 1rem; font-size: 0.85rem;">
             We reply within one business day — usually much faster.
           </p>
-        </form>
+        </div>
       </div>
     </div>
   </section>
@@ -128,5 +100,14 @@ import { SITE } from '../consts';
 
   .contact-list dd a:hover {
     text-decoration: underline;
+  }
+
+  /* Keep the embedded Jobber iframe inside its grid column on narrow screens. */
+  .quote-form {
+    min-width: 0;
+  }
+
+  .quote-form :global(iframe) {
+    max-width: 100%;
   }
 </style>
