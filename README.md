@@ -68,10 +68,6 @@ anywhere: the build passes, the script loads, and quote requests simply
 stop arriving. If leads ever go quiet, check
 [`src/pages/contact.astro`](src/pages/contact.astro) first.
 
-**`src/pages/thanks.astro` is unused.** It was the confirmation page for
-the old Netlify form; Jobber handles confirmation inside its own iframe.
-Harmless, but safe to delete.
-
 ## SEO in place
 
 - Unique titles/descriptions per page, canonical URLs, Open Graph tags
