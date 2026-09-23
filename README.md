@@ -1,39 +1,78 @@
 # Gargoyle Exterior Cleaning
 
-Marketing site for Gargoyle, an owner-operated exterior cleaning company
-(gutters, windows, roof/moss) serving Seattle and the Eastside. Built with
+Marketing site for Gargoyle — a veteran-owned, owner-operated exterior
+cleaning company (gutters, roof/moss, pressure washing, windows, solar)
+serving Bellevue, the Eastside, and Seattle. Built with
 [Astro](https://astro.build) in a Swiss graphic style with light/dark themes.
+
+**Live:** <https://gargoyleexteriors.com>
 
 ## Commands
 
-| Command           | Action                                    |
-| :---------------- | :---------------------------------------- |
-| `npm install`     | Install dependencies                      |
-| `npm run dev`     | Start dev server at `localhost:4321`      |
-| `npm run build`   | Build the production site to `./dist/`    |
-| `npm run preview` | Preview the production build locally      |
+| Command           | Action                                 |
+| :---------------- | :------------------------------------- |
+| `npm install`     | Install dependencies                   |
+| `npm run dev`     | Start dev server at `localhost:4321`   |
+| `npm run build`   | Build the production site to `./dist/` |
+| `npm run preview` | Preview the production build locally   |
 
-## Before launch — placeholders to replace
+## Deploying
 
-All business details live in one place: [`src/consts.ts`](src/consts.ts).
+Netlify builds from GitHub automatically. Push to `main` and the site
+rebuilds and goes live, usually within a minute:
 
-1. **Domain** — `https://www.gargoylecleaning.com` is a placeholder. Update it
-   in `src/consts.ts`, `astro.config.mjs` (the `site` field), and
-   `public/robots.txt`. The sitemap and canonical URLs derive from it.
-2. **Phone** — `(206) 555-0134` is a fictional 555 number. Replace it in
-   `src/consts.ts` and in the JSON-LD block in `src/layouts/Base.astro`.
-3. **Email** — `hello@gargoylecleaning.com` is a placeholder in `src/consts.ts`.
-4. **Contact form** — done. `/contact` embeds Jobber's work request form,
-   so submissions create a request and a lead directly in Jobber. The
-   fields are edited in Jobber (Settings → Work Request form), not here.
-   The embed `<script>` must keep its `is:inline` directive — without it
-   Astro bundles the script and strips the `clienthub_id` and `form_url`
-   attributes, and the form silently renders as an empty space.
-5. **Photos** — the site is intentionally photo-free right now. Real
-   before/after job photos (with `alt` text) would strengthen both trust
-   and SEO when Brandon has them.
+```sh
+git add -A
+git commit -m "What changed"
+git push
+```
 
-## SEO already in place
+There is no manual deploy step and no Netlify CLI setup required. To
+confirm a change actually shipped, load the live URL rather than trusting
+the build — Netlify caches, and browsers cache harder (`Cmd+Shift+R`).
+
+Three extra domains (`gargoyleec.com`, `gargoyleexteriorcleaning.com`,
+`gargoyleexterior.com`) 301-redirect to the main site via GoDaddy
+forwarding. DNS is at GoDaddy; hosting is Netlify.
+
+## Where to change things
+
+**Business details** — [`src/consts.ts`](src/consts.ts) is the single
+source of truth for name, phone, email, hours, and the service-area city
+list. Change a phone number or add a city here and it updates everywhere:
+header, footer, contact page, and the structured data Google reads.
+
+One exception: the phone number is also hard-coded in the `LocalBusiness`
+JSON-LD in [`src/layouts/Base.astro`](src/layouts/Base.astro) (schema.org
+wants E.164 format, `+1-425-435-4195`). Change both.
+
+**Page copy** — one file per page in `src/pages/`. Site-wide chrome lives
+in `src/components/Header.astro` and `Footer.astro`.
+
+**Photos** — `src/assets/`, with before/after job shots in
+`src/assets/proof/`. Import them through Astro's `<Image>` component so
+they get optimized to WebP at build time. Always write real `alt` text.
+
+**Quote form** — not in this repo. `/contact` embeds Jobber's work
+request form, so submissions create a request and a lead directly in
+Jobber. Edit the fields in Jobber under Settings → Work Request form;
+they update on the site with no code change and no deploy.
+
+## Gotchas
+
+**The Jobber embed needs `is:inline`.** Astro bundles `<script>` tags by
+default and strips non-standard attributes in the process — including the
+`clienthub_id` and `form_url` that carry the embed's entire configuration.
+Remove that directive and the form renders as an empty space with no error
+anywhere: the build passes, the script loads, and quote requests simply
+stop arriving. If leads ever go quiet, check
+[`src/pages/contact.astro`](src/pages/contact.astro) first.
+
+**`src/pages/thanks.astro` is unused.** It was the confirmation page for
+the old Netlify form; Jobber handles confirmation inside its own iframe.
+Harmless, but safe to delete.
+
+## SEO in place
 
 - Unique titles/descriptions per page, canonical URLs, Open Graph tags
 - `LocalBusiness` JSON-LD on every page, `FAQPage` JSON-LD on `/services`
