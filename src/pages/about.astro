@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { SITE } from '../consts';
 import jobSiteGargoyle from '../assets/job-site-gargoyle.jpg';
+import brandonDudley from '../assets/brandon-dudley.jpg';
 ---
 
 <Base
@@ -26,6 +27,16 @@ import jobSiteGargoyle from '../assets/job-site-gargoyle.jpg';
         <div>
           <p class="kicker">The story</p>
           <h2 id="story-heading" class="title-lg">From the Regiment to the roofline.</h2>
+          <figure class="owner-photo">
+            <Image
+              src={brandonDudley}
+              alt="Brandon Dudley, owner of Gargoyle Exterior Cleaning, smiling at the camera in a dark hoodie"
+              width={680}
+              format="webp"
+              quality="high"
+            />
+            <figcaption class="muted">Brandon Dudley, owner.</figcaption>
+          </figure>
         </div>
         <div class="body-copy">
           <p>
@@ -149,19 +160,22 @@ import jobSiteGargoyle from '../assets/job-site-gargoyle.jpg';
 </Base>
 
 <style>
-  .name-photo {
+  .name-photo,
+  .owner-photo {
     max-width: 340px;
     margin-top: 2rem;
   }
 
-  .name-photo img {
+  .name-photo img,
+  .owner-photo img {
     display: block;
     width: 100%;
     height: auto;
     border: 1px solid var(--line);
   }
 
-  .name-photo figcaption {
+  .name-photo figcaption,
+  .owner-photo figcaption {
     margin-top: 0.6rem;
     font-size: 0.8rem;
   }
