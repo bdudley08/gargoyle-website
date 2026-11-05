@@ -23,5 +23,9 @@ export const SITE = {
     'Seattle',
     'Lynnwood',
     'North Bend',
+    'Kent',
+    'Edmonds',
+    'Mill Creek',
+    'Carnation',
   ],
 };
