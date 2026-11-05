@@ -1,0 +1,15 @@
+---
+// A customer review quoted word for word from Google. Don't edit the wording.
+interface Props {
+  quote: string;
+  name: string;
+  place?: string;
+}
+const { quote, name, place } = Astro.props;
+---
+
+<figure class="review">
+  <p class="review-stars" role="img" aria-label="Five out of five stars">★★★★★</p>
+  <blockquote><p>{quote}</p></blockquote>
+  <figcaption class="muted">{place ? `${name}, ${place}` : name}</figcaption>
+</figure>

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import Review from '../components/Review.astro';
 import { SITE } from '../consts';
 import pwBefore from '../assets/proof/pressure-washing-patio-before.jpg';
 import pwAfter from '../assets/proof/pressure-washing-patio-after.jpg';
@@ -108,6 +109,13 @@ const faqSchema = {
             again in spring. Join the <a href="/gem-club">GEM Club</a> so you
             never have to think about it.
           </p>
+          <div style="margin-top: 2rem;">
+            <Review
+              quote="He was great at communicating with us before and after the project was completed. It is obvious that he is extremely knowledgeable with what he does and takes great pride in his work. He even went above and beyond and came back the next day and installed downspout strainers for no additional charge."
+              name="Mary M."
+              place="Bellevue"
+            />
+          </div>
         </div>
       </div>
       <div class="grid cols-2 proof">
@@ -190,6 +198,13 @@ const faqSchema = {
             clear — wait too long and full removal costs more than
             prevention would have.
           </p>
+          <div style="margin-top: 2rem;">
+            <Review
+              quote="Gargoyle provided a quick quote with excellent communication. Execution of the project was exactly as promised. Communication throughout was excellent. I would highly recommend Brandon for moss mitigation!"
+              name="Wayne M."
+              place="Seattle"
+            />
+          </div>
         </div>
       </div>
       <div class="grid cols-2 proof">
@@ -250,6 +265,13 @@ const faqSchema = {
             Pairs well with a gutter visit — bundling services on one trip saves
             you money.
           </p>
+          <div style="margin-top: 2rem;">
+            <Review
+              quote="We had Brandon come out to clean our exterior windows, and I couldn't be happier. Not only was he very thorough with his job, but he is such a genuine pleasure to work with. He has a wonderful, friendly personality that immediately puts you at ease, along with great communication and a strong work ethic. He even cleaned our skylight while he was here! Fair pricing and top-quality work. I highly recommend him!"
+              name="Sunil S."
+              place="Bothell"
+            />
+          </div>
         </div>
       </div>
       <div class="grid cols-2 illustration">
@@ -309,6 +331,13 @@ const faqSchema = {
             Pairs well with a gutter or window visit — ask about bundling for a
             full exterior refresh.
           </p>
+          <div style="margin-top: 2rem;">
+            <Review
+              quote="Gargoyle did an *amazing* job cleaning our gutters, roof, windows, and pressure-washing our driveway and patio. They are thorough, diligent, and very trustworthy! It took me a while to get used to our driveway being so clean!"
+              name="Heidi M."
+              place="Lynnwood"
+            />
+          </div>
         </div>
       </div>
       <div class="grid cols-2 proof">

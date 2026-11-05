@@ -506,3 +506,25 @@ textarea:focus {
   border-color: var(--bg);
   color: var(--ink);
 }
+
+/* Customer reviews */
+.review {
+  border-top: 2px solid var(--ink);
+  padding-top: 0.9rem;
+}
+
+.review-stars {
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.review figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.review-link {
+  margin-top: 2rem;
+}

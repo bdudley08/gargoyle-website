@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import Review from '../components/Review.astro';
 import { SITE } from '../consts';
 import heroGargoyle from '../assets/hero-gargoyle.jpg';
 ---
@@ -96,6 +97,31 @@ import heroGargoyle from '../assets/hero-gargoyle.jpg';
           <a href="/services#solar" class="card-link">Solar panel cleaning details →</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="reviews-heading">
+    <div class="container">
+      <p class="kicker">What customers say</p>
+      <h2 id="reviews-heading" class="title-lg">In their words.</h2>
+      <div class="grid cols-3" style="margin-top: 3rem;">
+        <Review
+          quote="Wow! I’ve never had a better experience with a roof, gutter, and window cleaning company. … What impressed me most, though, was how he communicated some roof issues I would never have known about without him. I knew he was looking out for me and my house."
+          name="Bob M."
+          place="Lynnwood"
+        />
+        <Review
+          quote="What stood out most was his honesty. He told us the roof is in great condition and probably doesn't need to be done every year, rather than upselling us."
+          name="Charlie F."
+          place="Mercer Island"
+        />
+        <Review
+          quote="Gargoyle Exterior was outstanding from start to finish. Their pricing was fair, communication was excellent, and the quality of workmanship exceeded expectations. It is rare to find a company that combines such a strong work ethic with genuine attention to detail."
+          name="Chris S."
+          place="Seattle"
+        />
+      </div>
+      <p class="review-link"><a href={SITE.googleReviewsUrl}>5.0 stars on Google. Read all our reviews →</a></p>
     </div>
   </section>
 

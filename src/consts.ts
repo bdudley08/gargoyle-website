@@ -9,6 +9,7 @@ export const SITE = {
   email: 'hello@gargoyleexteriors.com',
   hours: 'Mon–Sat, 8am–6pm',
   owner: 'Brandon Dudley',
+  googleReviewsUrl: 'https://share.google/YElccge8tiiJwPb2s',
   areaServed: [
     'Bellevue',
     'Kirkland',

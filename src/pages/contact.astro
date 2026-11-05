@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Review from '../components/Review.astro';
 import { SITE } from '../consts';
 ---
 
@@ -53,6 +54,13 @@ import { SITE } from '../consts';
             Texting a couple of photos of your gutters or roof to the number
             above is the fastest way to get an accurate quote.
           </p>
+          <div style="margin-top: 2rem; max-width: 26em;">
+            <Review
+              quote="I can’t find people like him. Honest, hard working, cares for my home like I would if I could do the job myself."
+              name="Dawn B."
+              place="Sammamish"
+            />
+          </div>
         </div>
 
         <div class="quote-form">
