@@ -31,6 +31,10 @@ const faqs = [
     a: "It depends on how established the moss is. Light growth, or a roof that's just starting to show it, usually only needs a preventative treatment — no removal necessary. Once it's built up into thick, clumpy patches, we remove it by hand first, then treat. We'll tell you honestly which one your roof needs before any work starts.",
   },
   {
+    q: 'Do you do roof repairs?',
+    a: "Yes, small ones on asphalt shingle roofs: exhaust and attic vents, pipe boots, exposed or popped nails, ridge caps, and small shingle sections. We'll show you photos and give you a firm price first. For anything bigger, we'll refer you to a roofer we trust.",
+  },
+  {
     q: 'Are you licensed and insured?',
     a: "Yes. Gargoyle is a licensed Washington specialty contractor, bonded, and carries general liability insurance — happy to provide documentation on request.",
   },
@@ -53,7 +57,7 @@ const faqSchema = {
 
 <Base
   title="Gutter, Window & Roof Cleaning Services in Bellevue & the Eastside — Gargoyle Exterior Cleaning"
-  description="Detailed exterior cleaning services for Bellevue, Eastside, and Seattle homes: specialist gutter cleaning with photo proof, interior/exterior window cleaning, and roof-safe moss removal."
+  description="Detailed exterior cleaning services for Bellevue, Eastside, and Seattle homes: specialist gutter cleaning with photo proof, interior/exterior window cleaning, roof-safe moss removal, and small roof repairs."
 >
   <section class="section section--flush">
     <div class="container">
@@ -191,7 +195,7 @@ const faqSchema = {
             <li>A wet or dry treatment applied to the entire roof, to kill existing moss and slow regrowth everywhere</li>
             <li>Gutter and downspout check after the work</li>
             <li>Before-and-after photos of the full roof</li>
-            <li>Minor shingle repairs made on the spot where we can, and a referral to a trusted roofer for anything more extensive</li>
+            <li>A close look at vents, pipe boots, nails, and ridge caps, with photos of anything that needs a <a href="#repairs">repair</a></li>
           </ul>
           <p class="muted" style="margin-top: 1.5rem;">
             Catch moss early and a yearly treatment alone often keeps a roof
@@ -405,6 +409,47 @@ const faqSchema = {
           format="webp"
           quality="high"
         />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="repairs" aria-labelledby="repairs-heading">
+    <div class="container">
+      <div class="grid split">
+        <div>
+          <span class="num">06</span>
+          <h2 id="repairs-heading" class="title-lg">Roof repairs</h2>
+          <p class="lede">
+            Most roof leaks start small: a cracked pipe boot, a brittle vent, a
+            nail working its way up. Caught early, they're quick fixes.
+          </p>
+        </div>
+        <div class="body-copy">
+          <p>
+            We're already on your roof for cleaning, so we look closely at the
+            spots where water gets in. When we find something, you get photos
+            and a firm price before we touch it. We fix it the same day if you
+            want, or you can book it on its own. Repairs are for asphalt
+            shingle roofs.
+          </p>
+          <h3 class="title-md" style="margin-top: 2rem;">Repairs we handle</h3>
+          <ul class="checklist">
+            <li>Exhaust vent replacement (4" and 6" bathroom and kitchen vents)</li>
+            <li>Plastic attic vent replacement, or an upgrade to metal</li>
+            <li>Pipe boot replacement, metal or worn rubber swapped for new rubber</li>
+            <li>Pipe boot sealing for a cracked collar, as a lower-cost temporary fix</li>
+            <li>Exposed and popped nails sealed and reset</li>
+            <li>Protective shingles over vent flanges, so exposed nails don't need resealing every few years</li>
+            <li>Ridge cap repair and replacement</li>
+            <li>Small shingle section repairs</li>
+            <li>Engineered roof anchors installed, with boots and caps</li>
+          </ul>
+          <p class="muted" style="margin-top: 1.5rem;">
+            If your roof is near the end of its life, we'll tell you, and we
+            won't sell you repairs that aren't worth making. For anything bigger
+            than a small repair, we'll refer you to a roofer we trust.
+          </p>
+        </div>
       </div>
     </div>
   </section>
