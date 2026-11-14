@@ -12,7 +12,7 @@ import gutterAfter from '../assets/proof/gutter-cleaning-after.jpg';
 import windowSqueegee from '../assets/window-cleaning-squeegee.jpg';
 import windowWaterfedPole from '../assets/window-cleaning-waterfed-pole.jpg';
 import solarWaterfedPole from '../assets/solar-panel-cleaning-waterfed-pole.jpg';
-import roofRepairShingles from '../assets/roof-repair-shingles.jpg';
+import roofRepairPipeBoot from '../assets/roof-repair-pipe-boot.jpg';
 
 const faqs = [
   {
@@ -452,11 +452,11 @@ const faqSchema = {
           </p>
         </div>
       </div>
-      <div class="illustration illustration--single">
+      <div class="illustration illustration--portrait">
         <Image
-          src={roofRepairShingles}
-          alt="A roofer kneeling on an asphalt shingle roof, working on a section of shingles"
-          width={1000}
+          src={roofRepairPipeBoot}
+          alt="A plumbing vent pipe on an asphalt shingle roof, its rubber pipe boot collar cracked and split where it meets the pipe"
+          width={800}
           format="webp"
           quality="high"
         />
@@ -501,6 +501,14 @@ const faqSchema = {
 
   .illustration--single {
     max-width: 640px;
+  }
+
+  .illustration--portrait {
+    max-width: 420px;
+  }
+
+  .illustration--portrait img {
+    aspect-ratio: 3 / 4;
   }
 
   .illustration img {
